@@ -1,0 +1,87 @@
+/* Body Background */
+body {
+    background: linear-gradient(to right, #4d5656, #4d5656); /* Gradien yang lembut */
+    color: white;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+/* Container Styling */
+.container {
+    background: rgba(10, 216, 22, 0.1); /* Efek latar belakang transparan */
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efek blur di latar belakang */
+}
+
+/* Card Styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi transisi */
+    background: rgba(255, 255, 255, 0.2); /* Warna latar belakang transparan */
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Perbesar sedikit saat hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+.card img {
+    border-radius: 10px; /* Membuat gambar sedikit melengkung */
+    transition: opacity 0.3s ease; /* Efek transisi pada gambar */
+}
+
+.card:hover img {
+    opacity: 0.8; /* Menurunkan opacity gambar saat hover */
+}
+
+/* Marquee Styling */
+marquee {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Tombol Styling */
+.btn-outline-primary {
+    transition: all 0.3s ease; /* Transisi yang mulus pada tombol */
+}
+
+.btn-outline-primary:hover {
+    background-color: #4ca1af; /* Mengubah warna latar belakang saat hover */
+    border-color: #4ca1af;
+    color: white; /* Mengubah warna teks saat hover */
+}
+
+/* Responsivitas untuk ponsel dan perangkat kecil */
+@media (max-width: 480px) {
+    /* Memastikan gambar berada di atas teks (jika menggunakan order) */
+    .img {
+        order: -1; /* Menukar urutan gambar */
+        width: 100%; /* Gambar akan mengambil lebar penuh */
+    }
+
+    /* Mengatur ukuran font dan jarak untuk elemen teks */
+    body {
+        font-size: 14px; /* Menyesuaikan ukuran font pada layar kecil */
+    }
+
+    /* Untuk memastikan kartu lebih rapat pada perangkat kecil */
+    .container {
+        padding: 15px; /* Mengurangi padding agar lebih rapat */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Memberikan margin bawah agar kartu tidak terlalu rapat */
+    }
+}
+
+/* Media Query untuk Tablet atau Ukuran Lebih Besar */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Memberikan lebih banyak ruang di perangkat tablet */
+    .container {
+        padding: 20px; /* Padding normal untuk tablet */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Sedikit lebih besar margin bawah */
+    }
+}
